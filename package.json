@@ -1,0 +1,17 @@
+{
+  "name": "mockgoose-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 20000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^2.4.5",
+    "mockgoose": "^6.0.3",
+    "mongoose": "^4.4.19"
+  }
+}
