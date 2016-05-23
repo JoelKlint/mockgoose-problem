@@ -2,6 +2,7 @@ var mocha = require('mocha');
 var Model = require('../models/test');
 var mockgoose = require('mockgoose');
 var mongoose = require('mongoose');
+var expect = require('chai').expect;
 
 describe('mockgoose-example', function(done) {
 	before(function(done) {
@@ -30,14 +31,9 @@ describe('mockgoose-example', function(done) {
 	// })
 
 	it('should not allow duplicates', function(done) {
-		Model.create({ name: 'test' })
-		.then(function(model) {
-			// Duplicate model was created
+		Model.create({ name: 'test' }, function(err, model) {
+			expect(err).to.exist;
 			done();
-		})
-		.catch(function(err) {
-			// Duplicate model was not created
-			done(err)
 		})
 	})
 })

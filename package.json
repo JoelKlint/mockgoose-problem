@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^3.5.0",
     "mocha": "^2.4.5",
     "mockgoose": "^6.0.3",
     "mongoose": "^4.4.19"
